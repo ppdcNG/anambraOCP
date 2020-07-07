@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="./src/semantic.min.css" />
+  <link rel="stylesheet" href="./src/bootstrap.css" />
+  <link rel="stylesheet" href="./src/main.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Data AOS  -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+  <title>Anambra OC Portal</title>
+
+  <style>
+    .select2-search__field {
+      display: none;
+    }
+
+    .select2-selection--multiple {
+      max-height: 40px;
+      overflow: auto;
+      cursor: pointer;
+    }
+
+    span.select2-selection.select2-selection--multiple {
+      cursor: pointer;
+    }
+
+    .select2-results__group:hover,
+    .select2-results__group:focus {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menu on Scroll -->
+  <div class="ui large top fixed hidden menu">
+    <div class="ui container">
+      <a class="active item">Home</a>
+      <a class="item" href="./views/project.html">Projects</a>
+      <a class="item" href="./views/table.html">Table</a>
+      <a class="item" href="./views/visualization.html">Visualization</a>
+      <div class="right menu">
+        <div class="item">
+          <a class="ui yellow button">Log in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar Menu (on responsive screen) -->
+  <div class="ui vertical inverted sidebar menu">
+    <a class="active item">Home</a>
+    <a class="item" href="./views/project.html">Projects</a>
+    <a class="item" href="./views/table.html">Table</a>
+    <a class="item" href="./views/visualization.html">Visualization</a>
+    <a class="item">Login</a>
+  </div>
+
+  <div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment" id="banner">
+      <div id="main-banner">
+        <div class="ui container">
+
+          <!-- main menubar -->
+          <div class="ui large secondary inverted pointing menu">
+            <a class="toc item">
+              <i class="fas fa-bars"></i>
+            </a>
+            <a class="active item">Home</a>
+            <a class="item" href="views/project.html">Projects</a>
+            <a class="item" href="views/table.html">Table</a>
+            <a class="item" href="views/visualization.html">Visualization</a>
+            <div class="right item">
+              <a class="ui basic yellow button">Log in</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="ui text container" id="header-text">
+          <img src="./img/anambraIcon.png" width="200" alt="Anambra-logo" data-aos="flip-left">
+          <h2 class="ui inverted header text-warning" data-aos="fade-right" data-aos-duration="1000">
+            Anambra Open Contracting Portal
+          </h2>
+          <h3 data-aos="fade-left" data-aos-duration="1500">
+            Access procurement data for all public procurement<br />across Anambra
+            State
+          </h3>
+          <div class="ui medium yellow button" style="margin-top: 1rem">
+            <a href="#main-content" style="color:#fff">Get Started <i class="fas fa-arrow-down"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui vertical stripe" id="main-content">
+      <div class="ui middle aligned stackable grid container">
+        <div class="row">
+          <div class="six wide left floated column">
+            <lottie-player src="https://assets8.lottiefiles.com/temp/lf20_TOE9MF.json" background="transparent"
+              speed="1" style="width: 400px; height: 300px;" loop autoplay></lottie-player>
+          </div>
+          <div class="eight wide column">
+            <h3 class="ui header">
+              Access to contracting data accross all stages of procurement
+            </h3>
+            <p>
+              Here we give you access to data such as needs assessments,
+              procurement plans, market studies, Tender Notices,
+              Specifications, Details of Award, Details of Bid Evaluation,
+              Signed Contracts, Ammendments, payments progress updates and
+              Completion and Termination Info. You can also download datasets,
+              export vizualisations and view site images
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="">
+        <div class="ui equal width stackable internally  grid container">
+          <div class="row">
+            <div class="center aligned column">
+              <h4 class="ui huge" style="margin-top: 2rem">Summary of this Portal</h4>
+              <hr width="50%" />
+            </div>
+          </div>
+          <div class="aligned row">
+            <div class="column">
+              <div class="ui vertical  steps" style="width: 100%">
+                <div class="completed step">
+                  <i class="fas fa-check-square fa-2x px-2" style="color: green;"></i>
+                  <div class="content">
+                    <div class="title">Number of Awarded Contracts</div>
+                    <div class="description">100,000</div>
+                  </div>
+                </div>
+                <div class="active step">
+                  <i class="fas fa-project-diagram fa-2x px-2"></i>
+                  <div class="content">
+                    <div class="title">Total Number of projects</div>
+                    <div class="description">Enter billing information</div>
+                  </div>
+                </div>
+                <div class="complete step">
+                  <i class="fas fa-money-bill-wave fa-2x" style="color: green;"></i>
+                  <div class="content">
+                    <div class="title">Total Contract Amount</div>
+                    <div class="description">
+                      <span class="right floated">&#8358; 1,000,000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui form">
+                <div class="field">
+                  <label>Select Location</label>
+                  <select multiple="" class="ui dropdown">
+                    <option value="">Select Country</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AQ">Antarctica</option>
+                    <option value="ZW">Zimbabwe</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Select Year</label>
+                  <select multiple="" class="ui dropdown">
+                    <option value="">Select Country</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AQ">Antarctica</option>
+                    <option value="ZW">Zimbabwe</option>
+                  </select>
+                </div>
+                <div id="select-container">
+                  <label class="label">Select MDA</label>
+                  <select id="select-group" multiple="multiple" style="width:100%">
+                    <optgroup label="Group 1">
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </optgroup>
+                    <optgroup label="Group 2">
+                      <option value="4">Option 4</option>
+                      <option value="5">Option 5</option>
+                      <option value="6">Option 6</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="center aligned column">
+              <div class="ui yellow button">
+                View Filtered Projects <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="">
+      <div class="ui middle aligned stackable grid container">
+        <div class="row">
+          <div class="eight wide column">
+            <h3 class="ui header">
+              Track, Monitor and Provide Feedback on Projects in your
+              Community
+            </h3>
+            <p>
+              Track the progress of projects within your community and provide
+              feedback on service delivery.
+            </p>
+          </div>
+          <div class="six wide right floated column">
+            <img src="https://www.inlandtown.com/wp-content/uploads/2016/03/new-awka-e1457959773303.jpg"
+              class="ui large bordered rounded image" />
+          </div>
+        </div>
+      </div>
+
+      <div class="ui container  vertical stripe grid">
+        <div class="row">
+          <div class="center aligned column">
+            <p class="ui huge">Check Out the Latest Updates</p>
+          </div>
+        </div>
+        <div class="ui three stackable special cards row">
+          <div class="ui link card">
+            <div class="content">
+              <div class="right floated meta">
+                <a class="ui red right ribbon label">20% Completed</a>
+              </div>
+              2020
+            </div>
+
+            <div class="image">
+              <img src="https://i1.wp.com/nairametrics.com/wp-content/uploads/2019/04/Solar.jpg?fit=900%2C563&ssl=1" />
+            </div>
+            <div class="content">
+              <div class="header">
+                Provision of Solar Electrificiation of communities in Madagali, Anambra
+              </div>
+              <div class="meta">
+                <a>Madagali</a>
+              </div>
+              <div class="description">
+                <span class="right floated">&#8358; 10,000,000</span>
+                <span class="left floated">
+                  Contract Amount
+                </span>
+              </div>
+              <div class="description">
+                <span class="right floated">01/01/2020</span>
+                <span class="left floated">
+                  Expected End date
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="ui link card">
+            <div class="content">
+              <div class="right floated meta">
+                <a class="ui green right ribbon label">80% Completed</a>
+              </div>
+              2020
+            </div>
+            <div class="image">
+              <img src="https://i2.wp.com/www.von.gov.ng/wp-content/uploads/2018/06/UNCHR.jpg?resize=696%2C522&ssl=1" />
+            </div>
+            <div class="content">
+              <div class="header">
+                Upgrade of Magistrate Court, Ganye
+              </div>
+              <div class="meta">
+                <a>Ganye</a>
+              </div>
+              <div class="description">
+                <span class="right floated">&#8358; 10,000,000</span>
+                <span class="left floated">
+                  Contract Amount
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="ui link card">
+            <div class="content">
+              <div class="right floated meta">
+                <a class="ui green right ribbon label">80% Completed</a>
+              </div>
+              2020
+            </div>
+            <div class="image">
+              <img
+                src="https://i1.wp.com/economicconfidential.com/wp-content/uploads/2018/08/Road-Construction.jpg?resize=275%2C183&ssl=1" />
+            </div>
+            <div class="content">
+              <div class="header">
+                The Federal Government on Saturday commenced work on the Mayo-Belwa-Jada-Ganye-Toungo, Anambra
+              </div>
+              <div class="meta">
+                <a>Tungo</a>
+              </div>
+              <div class="description">
+                <span class="right floated">&#8358; 1,000,000</span>
+                <span class="left floated">
+                  Contract Amount
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="center aligned column">
+            <div class="ui yellow button">
+              View All <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui inverted yellow vertical footer segment">
+      <div class="ui container">
+        <div class="ui stackable inverted divided equal height stackable grid">
+          <div class="five wide column">
+            <h4 class="ui inverted header text-dark">About Us</h4>
+            <div class="ui inverted link list">
+              <a href="#" class="item text-muted">About</a>
+              <a href="#" class="item text-muted">Contact</a>
+            </div>
+          </div>
+          <div class="five wide column">
+            <h4 class="ui inverted header text-dark">Services</h4>
+            <div class="ui inverted link list">
+              <a href="#" class="item text-muted">FAQs</a>
+              <a href="#" class="item text-muted">How it Works</a>
+            </div>
+          </div>
+          <div class="five wide column">
+            <h4 class="ui inverted header text-dark">Social</h4>
+            <a href="#" class="item" style="color: #00acee;">
+              <i class="fab fa-twitter fa-2x"></i>
+            </a>
+            <a href="#" class="item" style="color: #3b5998;">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+
+  <script src="./src/semantic.min.js"></script>
+
+  <!-- aos  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+  <!-- high charts -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script>
+    $(function () {
+
+      // fix menu when passed
+      $(".masthead").visibility({
+        once: false,
+        onBottomPassed: function () {
+          $(".fixed.menu").transition("fade in");
+        },
+        onBottomPassedReverse: function () {
+          $(".fixed.menu").transition("fade out");
+        }
+      });
+
+      // create sidebar and attach to menu open
+      $(".ui.sidebar").sidebar("attach events", ".toc.item");
+      $(".ui.dropdown").dropdown();
+
+      // new test
+      $("#select-group").select2();
+
+      let optgroupState = {};
+
+      $("body").on('click', '.select2-container--open .select2-results__group', function () {
+        $(this).siblings().toggle();
+        let id = $(this).closest('.select2-results__options').attr('id');
+        let index = $('.select2-results__group').index(this);
+        optgroupState[id][index] = !optgroupState[id][index];
+      })
+
+      $('#select-group').on('select2:open', function () {
+        $('.select2-dropdown--below').css('opacity', 0);
+        setTimeout(() => {
+          let groups = $('.select2-container--open .select2-results__group');
+          let id = $('.select2-results__options').attr('id');
+          if (!optgroupState[id]) {
+            optgroupState[id] = {};
+          }
+          $.each(groups, (index, v) => {
+            optgroupState[id][index] = optgroupState[id][index] || false;
+            optgroupState[id][index] ? $(v).siblings().show() : $(v).siblings().hide();
+          })
+          $('.select2-dropdown--below').css('opacity', 1);
+        }, 0);
+      })
+
+    });
+
+  </script>
+</body>
+
+</html>
